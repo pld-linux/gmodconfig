@@ -14,6 +14,8 @@ BuildRequires:	gnome-vfs2-devel >= 2.4.0
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.5.0
 BuildRequires:	rpm-devel
+Requires(post,postun):	/sbin/ldconfig
+Requires(post,postun):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,13 +57,18 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /usr/bin/scrollkeeper-update
-%postun	-p /usr/bin/scrollkeeper-update
+%post
+/sbin/ldconfig
+/usr/bin/scrollkeeper-update
+
+%postun
+/sbin/ldconfig
+/usr/bin/scrollkeeper-update
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %{_datadir}/%{name}
 %{_omf_dest_dir}/%{name}
 %{_libdir}/bonobo/servers/*
-%{_libdir}/lib*.so*
