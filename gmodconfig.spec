@@ -1,15 +1,16 @@
 Summary:	Graphic interface to configure Linux kernel modules
 Summary(pl):	Graficzny interfejs do konfiguracji modu³ów j±dra Linuksa
 Name:		gmodconfig
-Version:	0.3
+Version:	0.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	dbbd0c788804d5a260fad4b57d106d6d
+# Source0-md5:	c9968a96120a478325554b7de46c06c1
+Patch0:		%{name}-assert.patch
 URL:		http://gmodconfig.sourceforge.net/
-BuildRequires:	libxml++-devel >= 0.22
 BuildRequires:	libgnomeui-devel >= 2.2.0
+BuildRequires:	libxml++-devel >= 0.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,10 +34,10 @@ gmodconfig jest aplikacj± Gnome, pozwalaj±c± u¿ytkownikowi:
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
-
 %{__make}
 
 %install
@@ -50,7 +51,11 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post -p /usr/bin/scrollkeeper-update
+%postun -p /usr/bin/scrollkeeper-update
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root)%{_bindir}/*
 %{_datadir}/%{name}
+%{_omf_dest_dir}/%{name}
