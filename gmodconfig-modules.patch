@@ -1,0 +1,14 @@
+diff -urN aaa/gmodconfig-0.5/src/modinforeader.cpp gmodconfig-0.5/src/modinforeader.cpp
+--- aaa/gmodconfig-0.5/src/modinforeader.cpp	2003-10-12 21:01:50.000000000 +0200
++++ gmodconfig-0.5/src/modinforeader.cpp	2003-10-29 19:24:55.000000000 +0100
+@@ -282,6 +282,10 @@
+     // FIXME: don't hardcode
+     string cmd = "/sbin/modinfo " + modName;
+ 
++    string::size_type pos = cmd.rfind( ".o" );
++    if( pos != string::npos )
++        cmd.erase( pos, 2);
++
+     ifstream ifs;
+     PipeReader pr( cmd, ifs );
+ 
