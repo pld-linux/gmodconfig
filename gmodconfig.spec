@@ -14,7 +14,7 @@ BuildRequires:	libxml++-devel >= 0.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-gmodconfig is a Gnome application which allows (or will allow) Linux
+gmodconfig is a GNOME application which allows (or will allow) Linux
 users to:
 
  - configure kernel modules' parameters,
@@ -24,7 +24,7 @@ users to:
    website).
 
 %description -l pl
-gmodconfig jest aplikacj± Gnome, pozwalaj±c± u¿ytkownikowi:
+gmodconfig jest aplikacj± GNOME, pozwalaj±c± u¿ytkownikowi:
 
  - konfigurowaæ parametry modu³ów j±dra,
  - sprawdzaæ czy s± nowsze wersje modu³ów j±dra, oraz ¶ci±gaæ je,
