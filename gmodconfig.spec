@@ -2,7 +2,7 @@ Summary:	Graphic interface to configure Linux kernel modules
 Summary(pl):	Graficzny interfejs do konfiguracji modu³ów j±dra Linuksa
 Name:		gmodconfig
 Version:	0.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -52,6 +52,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+ln -sf libgmodconfig.so.0.0.0 $RPM_BUILD_ROOT%{_libdir}/libgmodconfig.so
+
+rm -f $RPM_BUILD_ROOT%{_libdir}/*.{a,la}
+
 %find_lang %{name}
 
 %clean
@@ -72,3 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_omf_dest_dir}/%{name}
 %{_libdir}/bonobo/servers/*
+%{_libdir}/lib*.so
