@@ -51,11 +51,11 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /usr/bin/scrollkeeper-update
-%postun -p /usr/bin/scrollkeeper-update
+%post	-p /usr/bin/scrollkeeper-update
+%postun	-p /usr/bin/scrollkeeper-update
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root)%{_bindir}/*
+%attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_omf_dest_dir}/%{name}
