@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	dbbd0c788804d5a260fad4b57d106d6d
 URL:		http://gmodconfig.sourceforge.net/
 BuildRequires:	libxml++-devel >= 0.22
 BuildRequires:	libgnomeui-devel >= 2.2.0
