@@ -1,0 +1,11 @@
+diff -urN aaa/gmodconfig-0.4/src/modgui.cpp gmodconfig-0.4/src/modgui.cpp
+--- aaa/gmodconfig-0.4/src/modgui.cpp	2003-07-30 08:14:29.000000000 +0200
++++ gmodconfig-0.4/src/modgui.cpp	2003-08-04 21:28:57.000000000 +0200
+@@ -28,6 +28,7 @@
+ #include <iostream>
+ #include <algorithm>
+ #include <vector>
++#include <assert.h>
+ #include "installmgr.h"
+ #include "modgui.h"
+ #include "moduletypes.h"
