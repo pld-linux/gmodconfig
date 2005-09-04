@@ -5,7 +5,7 @@ Version:	0.6
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gmodconfig/%{name}-%{version}.tar.gz
 # Source0-md5:	776596b1820f2e1584ab2f8b8c666922
 Patch0:		%{name}-assert.patch
 Patch1:		%{name}-modules.patch
