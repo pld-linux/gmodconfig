@@ -1,5 +1,5 @@
 Summary:	Graphic interface to configure Linux kernel modules
-Summary(pl):	Graficzny interfejs do konfiguracji modu³ów j±dra Linuksa
+Summary(pl.UTF-8):   Graficzny interfejs do konfiguracji moduÅ‚Ã³w jÄ…dra Linuksa
 Name:		gmodconfig
 Version:	0.6
 Release:	2
@@ -28,13 +28,13 @@ users to:
  - access kernel modules informations (license, authors, link to
    website).
 
-%description -l pl
-gmodconfig jest aplikacj± GNOME, pozwalaj±c± u¿ytkownikowi:
+%description -l pl.UTF-8
+gmodconfig jest aplikacjÄ… GNOME, pozwalajÄ…cÄ… uÅ¼ytkownikowi:
 
- - konfigurowaæ parametry modu³ów j±dra,
- - sprawdzaæ czy s± nowsze wersje modu³ów j±dra, oraz ¶ci±gaæ je,
-   budowaæ i instalowaæ,
- - odczytaæ informacjê o modu³ach (licencja, autorzy, odno¶nik do
+ - konfigurowaÄ‡ parametry moduÅ‚Ã³w jÄ…dra,
+ - sprawdzaÄ‡ czy sÄ… nowsze wersje moduÅ‚Ã³w jÄ…dra, oraz Å›ciÄ…gaÄ‡ je,
+   budowaÄ‡ i instalowaÄ‡,
+ - odczytaÄ‡ informacjÄ™ o moduÅ‚ach (licencja, autorzy, odnoÅ›nik do
    strony WWW).
 
 %prep
