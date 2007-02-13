@@ -1,5 +1,5 @@
 Summary:	Graphic interface to configure Linux kernel modules
-Summary(pl.UTF-8):   Graficzny interfejs do konfiguracji modułów jądra Linuksa
+Summary(pl.UTF-8):	Graficzny interfejs do konfiguracji modułów jądra Linuksa
 Name:		gmodconfig
 Version:	0.6
 Release:	2
